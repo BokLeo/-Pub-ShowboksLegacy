@@ -1,0 +1,21 @@
+#container{width: 100%; overflow: hidden;}
+
+
+.btn_back{position: absolute; left:50%; margin-left: -540px; top: 20px;}
+.btn_old{position: absolute;}
+.btn_new{position: absolute;}
+
+
+.btn_back *{float: left;}
+.btn_back button{line-height: 50px; font-size: 16px; color: #fff;}
+
+.btn_old{width: 550px; height: 150px; left: 50%; margin-left: -550px; top: 1155px;}
+.btn_old button{ border:1px solid #323232; width: 230px; height: 40px; margin-left: 310px; margin-top: 55px;
+					  font-size: 16px; line-height: 2px; color: #323232;}
+.btn_old button:hover{border:0; color:#fff; background: #323232;}
+
+.btn_new{width: 550px; height: 150px; left: 50%; margin-left: 0; top: 1155px;}
+.btn_new button{ border:1px solid #323232; width: 230px; height: 40px; margin-left: 10px; margin-top: 55px;
+					  font-size: 16px; line-height: 2px; color: #323232;}
+.btn_new button:hover{border:0; color:#fff; background: #00c093;}
+

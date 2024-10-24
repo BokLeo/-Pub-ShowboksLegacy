@@ -1,0 +1,63 @@
+$(function(){
+	
+				var bwWidth = $(window).width();
+				var scNum = $("html,body").scrollTop();
+				var headerH = parseInt($("header").css("height"));
+				var sectionH1 = parseInt($("section:eq(0)").css("height"));
+				var sectionH2 = parseInt($("section:eq(1)").css("height"));
+				var sectionH3 = parseInt($("section:eq(2)").css("height"));
+				var sectionH4 = parseInt($("section:eq(3)").css("height"));
+				var ss1H = headerH
+				var ss2H = headerH + sectionH1
+				var ss3H = headerH + sectionH1 + sectionH2
+				var ss4H = headerH + sectionH1 + sectionH2 + sectionH3
+				var skillH = $(".past .skill").offset().top;			
+	
+			if(bwWidth < 1100){
+				$(".skill li:eq(0) p").css({opacity:"0", paddingTop:"50px"});
+			};
+	
+	
+			$(".btn_top").animate({opacity:"0"});
+			$(".btn_top button").click(function(){ $("html,body").stop().animate({scrollTop:"0"},400); });				 
+			// 히스토리 하위 아코디언패널
+			$(".history_title").css("cursor","pointer");
+			$(".history_info:not(:eq(0))").hide();
+			$(".history_title").click(function(){
+				$(".history_info").stop().slideUp();
+				$(this).next().stop().slideDown();
+			});
+	
+	
+			// 히스토리2 하위 버튼
+			 $(".CS h5").click(function(){
+				  $(".CS p").hide();
+				  $(this).next().show();
+			 });
+        
+				var M_careerS = 1;
+				function M_careerS_Motion(){
+					if(M_careerS == 1 ){
+						M_careerS = 2;
+					$(".skill li:eq(0) p").animate({opacity:"1", paddingTop:"0"},1500,"easeOutBounce");
+					$(".skill li:eq(1) p").delay(300).animate({opacity:"1", paddingTop:"0"},1500,"easeOutBounce");
+					$(".skill li:eq(2) p").delay(600).animate({opacity:"1", paddingTop:"0"},1500,"easeOutBounce");
+					$(".skill li:eq(3) p").delay(900).animate({opacity:"1", paddingTop:"0"},1500,"easeOutBounce");
+					$(".skill li:eq(4) p").delay(1200).animate({opacity:"1", paddingTop:"0"},1500,"easeOutBounce");
+					$(".skill li:eq(5) p").delay(1500).animate({opacity:"1", paddingTop:"0"},1500,"easeOutBounce");
+					$(".skill li:eq(6) p").delay(1800).animate({opacity:"1", paddingTop:"0"},1500,"easeOutBounce");
+					$(".skill li:eq(7) p").delay(2100).animate({opacity:"1", paddingTop:"0"},1500,"easeOutBounce");
+					};
+
+				};
+	
+			$(window).scroll(function(){
+				
+		
+				
+				if(scNum > skillH + parseInt( $(".history_info").css("height"))  - 500 /*500*/  ){
+					M_careerS_Motion();
+			};
+	});
+	
+	});

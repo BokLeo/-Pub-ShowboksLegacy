@@ -10,9 +10,11 @@
 	</head>
 	
 	<body>
-		<p class="btn_back"><a href="index.html"><img src="img/info/btn_back.png" alt="포트폴리오 사이트로 돌아가기"><button>돌아가기</button></a></p>
-		<p class="btn_old"><a href="https://together.kakao.com/"><button>같이가치 사이트 보러가기</button></a></p>
-		<p class="btn_new"><a href="http://togetherkakao.dothome.co.kr"><button>가상 프로모션 보러가기</button></a></p>
+		<!-- <p class="btn_back"><a href="index.html"><img src="img/info/btn_back.png" alt="포트폴리오 사이트로 돌아가기"><button>돌아가기</button></a></p> -->
+		<p class="btn_back"><img src="img/info/btn_back.png" alt="포트폴리오 사이트로 돌아가기"><button>돌아가기</button></p>
+		<p class="btn_new"><a href="https://bokleo.github.io/-Pub-KakaoTogether/" target=""_blank><button>가상 프로모션 사이트 바로가기</button></a></p>
+		<!-- <p class="btn_old"><a href="https://together.kakao.com/"><button>같이가치 사이트 보러가기</button></a></p>
+		<p class="btn_new"><a href="http://togetherkakao.dothome.co.kr"><button>가상 프로모션 보러가기</button></a></p> -->
 		<div class="btn_top"><p><button></button></p></div>
 					
 		<div id="container">
@@ -23,5 +25,13 @@
 			<p><img src="img/signature_gray.png" alt="ShowBOKs"></p>
 			<p>COPYRIGHT (C) 2020  KangSeongBok CORPORATION. ALL RIGHTS RESERVED</p>
 		</footer>
+
+		<script>
+			$(document).ready(function(){
+				$(".btn_back").click(function(){
+					history.back();
+				});
+			});
+		</script>
 	</body>
 </html>
